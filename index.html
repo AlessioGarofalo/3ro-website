@@ -3,18 +3,235 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#000000">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="3ro — Beyond Baseline.">
-  <title>3ro</title>
+  <meta name="theme-color" content="#0a0a0b">
+  <title>3RO — Enhanced Robotic Organism</title>
+  <meta name="description" content="3RO (spoken Hero) is a hands-on path into human augmentation. Learn the biology and the engineering, then build your first wearable robot: an AI companion that rides on your shoulder. Join the founding waitlist.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://3ro.io/">
+  <meta property="og:title" content="3RO — Restore. Reinforce. Reimagine.">
+  <meta property="og:description" content="Learn human augmentation by building your first wearable robot. Founding waitlist open.">
+  <meta property="og:image" content="https://3ro.io/assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="landing.css">
-  <script type="module" src="landing.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="main.js"></script>
 </head>
 <body>
-  <main aria-label="3ro interactive suit portrait">
-    <canvas id="field" aria-label="A suit portrait and the 3ro logo below it. Move the pointer or drag to reveal a monochrome point cloud. Click or tap to toggle the full-colour portrait."></canvas>
-    <p class="screen-reader-only" id="visual-status" role="status"></p>
-  </main>
+<a class="skip" href="#join">Skip to the waitlist</a>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top" aria-label="3RO home">
+    <img src="assets/logo-white.svg" alt="" width="40" height="40">
+    <span class="brand-text"><b>3RO</b><small>Enhanced Robotic Organism</small></span>
+  </a>
+  <nav aria-label="Sections">
+    <a href="#meaning">The idea</a>
+    <a href="#course">The course</a>
+    <a href="#parrot">Parrot</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn btn-small" href="#join">Join the waitlist</a>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>3RO · spoken <em>Hero</em><span class="long"> · Founding waitlist open</span></p>
+      <h1>Restore.<br>Reinforce.<br><em>Reimagine.</em></h1>
+      <p class="lede">A hands-on path into human augmentation. Learn the biology and the engineering behind it, then build your first wearable robot: <strong>Parrot, an AI companion that rides on your shoulder.</strong></p>
+      <form class="waitlist inline" data-waitlist novalidate>
+        <label class="sr" for="hero-email">Email address</label>
+        <input id="hero-email" name="email" type="email" autocomplete="email" placeholder="you@domain.com" required>
+        <button class="btn" type="submit">Become a founding member</button>
+        <p class="form-note">Early access and founding pricing. No spam, unsubscribe anytime. <a href="privacy.html">Privacy</a></p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <figure class="hero-figure" id="portal" aria-label="Concept of the 3RO suit with the Parrot companion on the shoulder">
+      <div class="halo" aria-hidden="true"></div>
+      <img src="assets/suit.webp" alt="Concept art: a charcoal technical suit with ivory armour and warm metallic details, a small robotic companion raised on the left shoulder." width="900" height="1338" fetchpriority="high">
+      <div class="scan" aria-hidden="true"></div>
+    </figure>
+  </section>
+
+  <!-- MEANING -->
+  <section class="meaning reveal" id="meaning">
+    <p class="kicker">What 3RO stands for</p>
+    <div class="ero">
+      <article><span class="letter">E</span><h3>Enhanced</h3><p>Technology that extends what a person can sense, decide and do — instead of doing it for them.</p></article>
+      <article><span class="letter">R</span><h3>Robotic</h3><p>Machines you wear and work with, at body scale. Not watched on a screen: carried, on you, all day.</p></article>
+      <article><span class="letter">O</span><h3>Organism</h3><p>Person and machine designed as one system, where the human stays in charge and the robot earns its place.</p></article>
+    </div>
+    <p class="aside"><span lang="it">Ero</span> means <em>“I was”</em> in Italian. 3RO is about what you become next.</p>
+  </section>
+
+  <!-- THREE Rs -->
+  <section class="spectrum reveal" aria-labelledby="spectrum-title">
+    <div class="section-head">
+      <p class="kicker">The augmentation spectrum</p>
+      <h2 id="spectrum-title">Three ways a machine can make you <em>more</em>.</h2>
+    </div>
+    <ol class="rs">
+      <li><span class="num">01</span><h3>Restore</h3><p>Recover a capability that was lost or reduced. Assistive technology, done with the person at the centre.</p></li>
+      <li><span class="num">02</span><h3>Reinforce</h3><p>Strengthen what you already have: attention, memory, situational awareness, a second pair of eyes over your shoulder.</p></li>
+      <li><span class="num">03</span><h3>Reimagine</h3><p>Add senses you were never born with. Thermal sight, range sensing, a companion that notices what you miss.</p></li>
+    </ol>
+  </section>
+
+  <!-- COURSE -->
+  <section class="course reveal" id="course" aria-labelledby="course-title">
+    <div class="section-head">
+      <p class="kicker">The first course · Beyond Baseline</p>
+      <h2 id="course-title">From first principles to your first augmentation.</h2>
+      <p class="sub">A beginner pathway that connects how the body works with how wearable machines are built. Every module ends in something you can run, test and keep — and every capability you learn goes straight into your own robot.</p>
+    </div>
+    <dl class="stats">
+      <div><dt>Modules</dt><dd>48</dd></div>
+      <div><dt>Lessons</dt><dd>192</dd></div>
+      <div><dt>Hands-on labs</dt><dd>48</dd></div>
+      <div><dt>Robot you build</dt><dd>1</dd></div>
+    </dl>
+    <ol class="path">
+      <li><span>Phase 1</span><h3>Person &amp; purpose</h3><p>Human signals, perception and interfaces. Pick a real task the robot should help you with.</p></li>
+      <li><span>Phase 2</span><h3>Senses &amp; signals</h3><p>Power, sampling, vision, sound, thermal and motion sensing. Bring the first shoulder node to life.</p></li>
+      <li><span>Phase 3</span><h3>The physical pair</h3><p>CAD, 3D printing and mounts: the raised shoulder robot and the wrist holder for your phone.</p></li>
+      <li><span>Phase 4</span><h3>Talk, move, wear</h3><p>AI conversation, speech, supervised motion, mass, heat and power — until it is safe to wear.</p></li>
+      <li><span>Capstone</span><h3>Your companion</h3><p>Demonstrate the finished pair on a real everyday task, with the evidence to back it.</p></li>
+    </ol>
+    <ul class="features">
+      <li><b>An experiment in every module.</b> Interactive browser models: predict, explore, explain.</li>
+      <li><b>Real code from day one.</b> Notebooks, firmware and an Android app you modify as you learn.</li>
+      <li><b>An AI tutor at your side.</b> Ask about the lesson you are on, with your work in context.</li>
+      <li><b>Safe by design.</b> Non-invasive, bench-first. Nothing goes on your body before it has earned it.</li>
+    </ul>
+  </section>
+
+  <!-- PARROT -->
+  <section class="parrot reveal" id="parrot" aria-labelledby="parrot-title">
+    <div class="parrot-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 440" class="schematic">
+        <defs>
+          <linearGradient id="shell" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f4eee2"/><stop offset="1" stop-color="#cfc6b4"/></linearGradient>
+        </defs>
+        <g class="grid">
+          <path d="M0 400H420M0 330H420M0 260H420M0 190H420M0 120H420M0 50H420M70 0V440M140 0V440M210 0V440M280 0V440M350 0V440"/>
+        </g>
+        <!-- shoulder -->
+        <path class="shoulder" d="M40 420 C90 360 170 340 260 350 C320 356 370 380 400 420"/>
+        <!-- base -->
+        <rect x="170" y="330" width="90" height="26" rx="8" fill="url(#shell)"/>
+        <ellipse class="axis" cx="215" cy="330" rx="62" ry="12"/>
+        <!-- lower arm -->
+        <g class="arm">
+          <rect x="203" y="218" width="24" height="116" rx="10" fill="#2a2a2d" stroke="#e8a23a" stroke-width="1.4"/>
+          <circle cx="215" cy="222" r="13" fill="#1a1a1c" stroke="#e8a23a" stroke-width="2"/>
+          <path class="axis" d="M186 236 A32 32 0 0 1 196 196"/>
+          <!-- head -->
+          <g class="head">
+            <rect x="150" y="140" width="130" height="70" rx="22" fill="url(#shell)"/>
+            <circle cx="186" cy="175" r="11" fill="#141416"/><circle cx="186" cy="175" r="4" fill="#4fd1c5"/>
+            <circle cx="215" cy="175" r="11" fill="#141416"/><circle cx="215" cy="175" r="3.5" fill="#e8a23a"/>
+            <circle cx="244" cy="175" r="11" fill="#141416"/><circle class="blink" cx="244" cy="175" r="4" fill="#f4eee2"/>
+            <path d="M160 140 Q215 112 270 140" fill="none" stroke="#cfc6b4" stroke-width="5" stroke-linecap="round"/>
+            <path class="axis" d="M292 152 A40 40 0 0 1 292 202"/>
+          </g>
+        </g>
+        <g class="callouts">
+          <text x="20" y="118">CAMERA · RANGE · STATUS</text>
+          <line x1="110" y1="124" x2="178" y2="168"/>
+          <text x="300" y="132">HEAD PITCH</text>
+          <text x="40" y="214">ELBOW</text>
+          <line x1="88" y1="218" x2="186" y2="222"/>
+          <text x="290" y="318">BASE YAW</text>
+        </g>
+      </svg>
+      <p class="status-pill"><span class="dot"></span>Prototype in development · follow the build</p>
+    </div>
+    <div class="parrot-copy">
+      <p class="kicker">Meet Parrot</p>
+      <h2 id="parrot-title">Your first augmentation sits on your shoulder.</h2>
+      <p class="sub">Parrot is a small robot that rides on your shoulder, looks around, notices things and talks with you. Your phone, worn on the wrist, is its controller. You build every part of it during the course.</p>
+      <ul class="specs">
+        <li><b>Moves</b><span>Three powered joints — base, elbow, head — for glance, attention and rest.</span></li>
+        <li><b>Sees</b><span>A head camera and range sensor, plus a thermal sense for warmth you can't see.</span></li>
+        <li><b>Talks</b><span>Ask a question at your shoulder, review it, hear the answer. Follow-ups included.</span></li>
+        <li><b>Stays safe</b><span>The AI can talk, but it can't grab the motors. Movement is owned by a local, bounded controller.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="how reveal" aria-labelledby="how-title">
+    <h2 id="how-title" class="sr">How it works</h2>
+    <ol class="steps">
+      <li><span class="num">Learn</span><p>Biology, sensing, control and fabrication, explained from zero with live experiments.</p></li>
+      <li><span class="num">Build</span><p>Each module adds a real capability to the same robot. No toy projects, no starting over.</p></li>
+      <li><span class="num">Wear</span><p>Finish with a working companion and the judgement to design your next augmentation.</p></li>
+    </ol>
+  </section>
+
+  <!-- JOIN -->
+  <section class="join reveal" id="join" aria-labelledby="join-title">
+    <div class="join-copy">
+      <p class="kicker">Founding members</p>
+      <h2 id="join-title">Be one of the first to build.</h2>
+      <p class="sub">The first cohort opens to the waitlist before anyone else. Founding members get:</p>
+      <ul class="perks">
+        <li>Early access to the course and the Parrot build</li>
+        <li>Founding-member pricing, announced to the list first</li>
+        <li>Build-in-public updates from the workshop</li>
+        <li>A voice in what the next modules cover</li>
+      </ul>
+    </div>
+    <form class="waitlist card" data-waitlist novalidate>
+      <label for="join-name">First name <span class="opt">optional</span></label>
+      <input id="join-name" name="firstname" type="text" autocomplete="given-name" placeholder="Ada">
+      <label for="join-email">Email</label>
+      <input id="join-email" name="email" type="email" autocomplete="email" placeholder="you@domain.com" required>
+      <fieldset>
+        <legend>I'm most interested as a…</legend>
+        <div class="chips">
+          <label><input type="radio" name="interest" value="learner" checked><span>Learner</span></label>
+          <label><input type="radio" name="interest" value="builder"><span>Maker / builder</span></label>
+          <label><input type="radio" name="interest" value="professional"><span>Professional / team</span></label>
+          <label><input type="radio" name="interest" value="partner"><span>Partner / investor</span></label>
+        </div>
+      </fieldset>
+      <label class="consent"><input type="checkbox" name="consent" required><span>Send me 3RO waitlist and build updates. I can unsubscribe at any time. See the <a href="privacy.html">privacy notice</a>.</span></label>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-wide" type="submit">Join the founding waitlist</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq reveal" id="faq" aria-labelledby="faq-title">
+    <div class="section-head"><p class="kicker">Questions</p><h2 id="faq-title">Before you join.</h2></div>
+    <details><summary>Do I need an engineering background?</summary><p>No. The course is a beginner pathway: it starts from measurement and the human body and builds up. It does ask for curiosity and steady weekly effort — it is a serious programme, not a weekend kit.</p></details>
+    <details><summary>What will it cost?</summary><p>Pricing will be announced to the waitlist first, with a founding-member rate for the first cohort. Parrot's hardware is bought separately from off-the-shelf parts, and the course includes a full parts list and ordering guide.</p></details>
+    <details><summary>What equipment do I need?</summary><p>A computer to start. Later modules use an Android phone as the wrist controller, a 3D printer (or a printing service) and basic electronics tools. Each one is introduced when it's needed, not all on day one.</p></details>
+    <details><summary>Is it safe?</summary><p>Safety is built into the design. Everything is non-invasive and built on the bench first. Movement is controlled locally with hard limits and a stop, and nothing makes medical or protective claims.</p></details>
+    <details><summary>Who is behind 3RO?</summary><p>3RO is founded by Alessio Garofalo: former Italian Army signal officer, Amazon technology leader across Europe and Asia-Pacific, CIO/CTO at NEOM Oxagon and Chief Transformation Officer at NATO, and author of <em>CTO by Mistake</em>. 3RO is where that path goes next.</p></details>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="foot-brand">
+    <img src="assets/logo-white.svg" alt="3RO" width="56" height="56">
+    <p><b>3RO</b> · Enhanced Robotic Organism<br><span>Restore. Reinforce. Reimagine.</span></p>
+  </div>
+  <div class="foot-links">
+    <a href="mailto:info@3ro.io">info@3ro.io</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="#" data-course-link>Learner sign-in</a>
+  </div>
+  <p class="copy">© <span data-year>2026</span> 3RO</p>
+</footer>
+
+<div class="curtain" aria-hidden="true"></div>
 </body>
 </html>
