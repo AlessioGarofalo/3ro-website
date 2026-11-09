@@ -107,13 +107,11 @@ if(!reduced&&matchMedia('(pointer: fine)').matches){
   portal.addEventListener('pointerleave',()=>{portal.style.setProperty('--px',0);portal.style.setProperty('--py',0);});
 }
 
-/* ---------- Curriculum map filter ---------- */
-const phasesEl=document.querySelector('.phases'),stripEl=document.querySelector('.strip');
-document.querySelectorAll('.lg').forEach(btn=>btn.addEventListener('click',()=>{
-  const on=btn.getAttribute('aria-pressed')!=='true';
-  document.querySelectorAll('.lg').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed',String(on));
-  const f=on?btn.dataset.cat:'';phasesEl.dataset.filter=f;stripEl.dataset.filter=f;
-}));
-
+/* ---------- Curriculum wheel ---------- */
+const wheel=document.querySelector('.wheel');
+if(wheel){
+  const segs=[...wheel.querySelectorAll('.seg')];
+  const pick=seg=>{const on=!seg.classList.contains('on');segs.forEach(s=>s.classList.remove('on'));if(on)seg.classList.add('on');wheel.classList.toggle('focus',on);};
+  segs.forEach(seg=>{seg.addEventListener('click',()=>pick(seg));seg.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(seg);}});});
+}
 document.querySelectorAll('[data-year]').forEach(el=>{el.textContent=new Date().getFullYear();});
