@@ -13,7 +13,7 @@ const MESSAGES={
   consent:'Please tick the box so we can send you updates.',
   sending:'Adding you to the list…',
   done:'You\'re on the list. Check your inbox to confirm your email.',
-  fallback:'Your email app should open with a pre-filled message — just press send.',
+  fallback:'Your email app should open with a pre-filled message. Just press send.',
   error:'Something went wrong. Please try again, or write to info@3ro.io.'
 };
 
@@ -106,5 +106,14 @@ if(!reduced&&matchMedia('(pointer: fine)').matches){
   });
   portal.addEventListener('pointerleave',()=>{portal.style.setProperty('--px',0);portal.style.setProperty('--py',0);});
 }
+
+/* ---------- Curriculum map filter ---------- */
+const phasesEl=document.querySelector('.phases'),stripEl=document.querySelector('.strip');
+document.querySelectorAll('.lg').forEach(btn=>btn.addEventListener('click',()=>{
+  const on=btn.getAttribute('aria-pressed')!=='true';
+  document.querySelectorAll('.lg').forEach(b=>b.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed',String(on));
+  const f=on?btn.dataset.cat:'';phasesEl.dataset.filter=f;stripEl.dataset.filter=f;
+}));
 
 document.querySelectorAll('[data-year]').forEach(el=>{el.textContent=new Date().getFullYear();});
